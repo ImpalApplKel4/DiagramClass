@@ -1,0 +1,48 @@
+
+INSERT INTO USER (username,password)
+VALUES (staffgudang,1233);
+
+INSERT INTO USER (username,password)
+VALUES (pemilik,1235);
+
+INSERT INTO USER (username,password)
+VALUES (keuangan,1234);
+
+INSERT INTO USER (service,password)
+VALUES (staffgudang,kangrahmat);
+
+INSERT INTO PRODUK (idProduk,username,namaProduk,hargaProduk,tipeProduk)
+VALUES (P007,staffgudang, 'Bakso ikan Goreng',40.000,bakso );
+
+
+INSERT INTO PRODUK (idProduk,username,namaProduk,hargaProduk,tipeProduk)
+VALUES (P008,staffgudang, 'Bakso ikan Bakar',50.000,bakso );
+
+
+INSERT INTO BAHAN (idBahan,username,namaBahan,stockBahan,tglBahan)
+VALUES (B001,staffgudang, 'Bumbu Ikan',100,03/09/2018 );
+
+INSERT INTO BAHAN (idBahan,username,namaBahan,stockBahan,tglBahan)
+VALUES (B002,staffgudang, 'Terigu',200,02/09/2018 );
+
+INSERT INTO BAHAN (idBahan,username,namaBahan,stockBahan,tglBahan)
+VALUES (B003,staffgudang, 'Daging Ikan',80,01/09/2018 );
+
+INSERT INTO KARYAWAN (NIK,username,namaKar,Gaji,divisi,noHP)
+VALUES (11223345, staffgudang,'Cecep',2.000.000,08992345356 );
+
+
+INSERT INTO KARYAWAN (NIK,username,namaKar,Gaji,divisi,noHP)
+VALUES (11273348, keuangan,'Ahmad',2.500.000,08978433626 );
+
+INSERT INTO PROFIT_OR_LOSS (idPOL,tglPOL,TotalPengeluaran,TotalPemesanan,POL,totalPiutang)
+VALUES (POL013, 03/09/2018, 200000, 100000, -100000, 0);
+
+INSERT INTO PEMESANAN (idPemesan,username,namaCust,CP,alamatCust,status,TotalHarga,tglbayar,totalidbayar,pesanan,jumpesanan,tglpesan,jumpiutang)
+VALUES (P001, service,Atuy,098238795238,jl margahayu no 21, lunas, 100000, 02/09/2018,100000, 'Bakso ikan Bakar', 2, 02/09/2018, 0 );
+
+INSERT INTO Detil_pemesanan (idPemesanan,jumPesan,Pesanan)
+VALUES (P001,2,'Bakso ikan Bakar' );
+
+INSERT INTO PENGELUARAN (idPengeluaran,username,idPOL,keterangan,hargaPengeluaran)
+VALUES (PG001,keuangan,POL013,lunas,200000 );
